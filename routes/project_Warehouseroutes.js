@@ -5,7 +5,9 @@ const {
   createProject_warehouse,
   updateProject_warehouse,
   deleteProject_warehouse,
-
+  uploadprojectpdf,
+  processpdf,
+  downloadpdf
 } = require('../Services/ProjectMangementServices');
 
 const authService = require('../Services/authServices');
@@ -19,6 +21,8 @@ router
   .post(
     authService.protect,
     authService.allowedto('admin', 'student'),
+    uploadprojectpdf,
+    processpdf,
     createProject_warehouse
   );
 router
@@ -27,6 +31,8 @@ router
   .put(
     authService.protect,
     authService.allowedto('admin', 'student'),
+    uploadprojectpdf,
+    processpdf,
     updateProject_warehouse
   )
   .delete(
@@ -34,5 +40,7 @@ router
     authService.allowedto('student'),
     deleteProject_warehouse
   );
+
+  router.route('/download/:filename').get(downloadpdf)
 
 module.exports = router;

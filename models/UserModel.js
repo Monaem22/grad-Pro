@@ -48,7 +48,12 @@ const userSchema = new mongoose.Schema(
           postalCode: String,
         },
       ],
-      favourtelist: [String],
+      favourtelist: [
+        {
+          type: mongoose.Schema.Types.ObjectId,
+          ref: 'projectwarehouse',
+        },
+      ],
     },
     { timestamps: true }
   );

@@ -17,6 +17,7 @@ server.use(cors());
 server.options("*", cors());
 //middleware
 server.use(express.json());
+server.use(express.static(path.join(__dirname, "uploads")));
 server.use(express.urlencoded({ extends: true }));
 //amountroute
 mountRoutes(server);

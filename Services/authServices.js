@@ -189,3 +189,12 @@ exports.resetPassword = async (req, res, next) => {
   );
   res.status(200).json({ message:"success",token });
 };
+
+ exports.logout=(req, res) => {
+  // Clear the token from the client-side (e.g., remove it from local storage or cookies)
+  // For example, if using cookies:
+  res.clearCookie('jwtToken'); // Assuming your token is stored in a cookie named 'jwtToken'
+
+  // Redirect the user to the login page or any other desired destination
+  res.redirect('/login');
+};

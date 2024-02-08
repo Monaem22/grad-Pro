@@ -1,22 +1,49 @@
 const mongoose = require("mongoose");
-const warehouseDB = mongoose.model("projectsWarehouse", {
-  ProjectName: {
-    type: String,
-    default: "object",
-  },
-  category: {type:mongoose.Types.ObjectId},
-  comments: {
-    type: String,
-  },
+const warehouseDB = mongoose.Schema(
+  {
+    ProjectName: {
+      type: String,
+      default: "object",
+    },
+    category: { type: mongoose.Types.ObjectId },
+    comments: {
+      type: String,
+    },
 
-  likes: {
-    type: Number,
-    default: 0,
+    likes: {
+      type: Number,
+      default: 0,
+    },
+    date: {
+      type: String,
+      default: Date.now(),
+    },
+    user: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+    },
+    pdf: { type: String },
   },
-  date: {
-    type: String,
-    default: Date.now(),
-  },
-},{timestamps:true});
+  { timestamps: true }
+);
 
-module.exports = warehouseDB;
+const setPdfURL = (doc) => {
+  if (doc.pdf) {
+    const pdfUrl = `http://localhost:${process.env.PORT}/project/${doc.pdf}`;
+    doc.pdf = pdfUrl;
+  }
+};
+
+// findOne, findAll and update
+warehouseDB.post("init", (doc) => {
+  setPdfURL(doc);
+});
+
+// create
+warehouseDB.post("save", (doc) => {
+  setPdfURL(doc);
+});
+
+const warehousemodel = mongoose.model("projectwarehouse", warehouseDB);
+
+module.exports = warehousemodel;
