@@ -67,5 +67,61 @@ exports.downloadpdf= async (req, res, next) => {
       console.error(error);
       res.status(500).send('Internal Server Error');
     }
-  };
+};
   
+exports.acceptProject = async (req, res) => {
+  const projectId = req.params.projectid;
+
+  try {
+    const project = await Project_warehouse.findByIdAndUpdate(
+      projectId,
+      { status: 'accepted' }, 
+      { new: true }
+    );
+
+    if (!project) {
+      return res.status(404).json({ msg: "Project not found" });
+    }
+
+    return res.status(200).json({ msg: "Project accepted", data: project });
+  } catch (error) {
+    console.error("Error accepting project:", error);
+    return res.status(500).json({ msg: "Internal Server Error" });
+  }
+};
+
+exports.rejectproject = async (req, res) => {
+  let projectId = req.params.projectid; // Correctly accessing projectId from req.params
+  console.log(projectId);
+  
+  try {
+    const deletedProject = await Project_warehouse.findByIdAndDelete(projectId);
+
+    if (!deletedProject) {
+      return res.status(404).json({ msg: "Project not found" });
+    }
+
+    return res.status(200).json({ msg: "Project deleted", data: deletedProject });
+  } catch (error) {
+    console.error("Error rejecting project:", error);
+    return res.status(500).json({ msg: "Internal Server Error" });
+  }
+};
+
+//add review function here
+// exports.review=(req,res)=>{
+//   let data=req.body;
+//   let pid=data.pid;
+//   let uid=req.user._id;
+//   Review.create(data,(err,doc)=>{
+//     if(err) throw err;
+//     Project_warehouse.findByIdAndUpdate(pid,{$push:{reviews:doc._id}})
+//     .then(()=>{
+//       User.findByIdAndUpdate(uid,{$push:{reviewedpro:pid}},function(err,user){
+//         if(err) throw err;
+//         else res.json(user);
+//       });
+//     }).catch((e)=>{console.log(e)});
+// }};
+
+

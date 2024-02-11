@@ -22,6 +22,4 @@ router.put("/resetPassword", resetPassword);
 
 router.get('/logout',logout)
 
-
-
 module.exports = router;

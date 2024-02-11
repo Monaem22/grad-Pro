@@ -22,6 +22,11 @@ const warehouseDB = mongoose.Schema(
       type: mongoose.Schema.Types.ObjectId,
       ref: "User",
     },
+    status:{
+      type:String,
+      enum:['pending','accepted','canceled'],
+      default:'pending'
+    },
     pdf: { type: String },
   },
   { timestamps: true }

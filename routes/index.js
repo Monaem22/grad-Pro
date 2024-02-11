@@ -2,7 +2,7 @@ const categoeyroute=require("./categoryroutes")
 const projectwarehouseroute=require("./project_Warehouseroutes")
 const authroute=require('./authroutes.js')
 const favourtielistroute=require('./favouriteListroutes.js');
-
+const userroute=require('./userroutes.js')
 
 
 
@@ -12,6 +12,7 @@ const mountRoutes=(server)=>{
     server.use("/projectwarehouse", projectwarehouseroute);
     server.use("/auths", authroute);
     server.use('/favourite',favourtielistroute)
+    server.use('/users',userroute)
     }
     
 module.exports= mountRoutes;

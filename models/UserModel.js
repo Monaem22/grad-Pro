@@ -19,7 +19,7 @@ const userSchema = new mongoose.Schema(
       },
       phone: String,
       profileImg: String,
-  
+      isblocked:{type : Boolean , default  : false}, // blocked by admin or self
       password: {
         type: String,
         required: [true, 'password required'],
