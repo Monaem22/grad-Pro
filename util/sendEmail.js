@@ -17,7 +17,7 @@ const sendEmail = async (options) => {
   // setup email data with unicode symbols
 
   const mailOpts = {
-    from: "E-shop App <mohamednode@outlook.com>",
+    from: "graduation_Project App <manemosama@gmail.com>",
     to: options.email,
     subject: options.subject,
     text: options.text,

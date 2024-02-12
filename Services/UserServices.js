@@ -7,7 +7,7 @@ const ApiFeature = require("../util/ApiFeature");
 const { uploadSingleImage } = require("../middleware/uploadImageMiddleware");
 const { v4: uuidv4 } = require("uuid");
 const sharp = require("sharp");
-const multer = require("multer");
+// const multer = require("multer");
 const bcrypt = require("bcryptjs");
 
 const uploadCategoryImage = uploadSingleImage("image");

@@ -1,26 +1,46 @@
 const mongoose = require("mongoose");
+
 const warehouseDB = mongoose.Schema(
-  {
+  {   
     ProjectName: {
       type: String,
       default: "object",
     },
-    category: { type: mongoose.Types.ObjectId },
-    comments: {
+    category: { 
+      type: mongoose.Types.ObjectId, ref: 'category'
+    },
+    description: {
       type: String,
+      // required: true
     },
 
-    likes: {
+    comments: [{
+      user: {  
+        type : mongoose.Schema.Types.ObjectId, ref: 'User' 
+      },
+      content: {
+        type: String,
+        // required: true
+      }
+    }],
+
+    likes: [{
+      user: { 
+        type : mongoose.Schema.Types.ObjectId, ref: 'User' 
+      },
+    }],
+    numberOfLikes: {
       type: Number,
       default: 0,
+    },
+
+    user: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'User'
     },
     date: {
       type: String,
       default: Date.now(),
-    },
-    user: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "User",
     },
     pdf: { type: String },
   },
@@ -43,6 +63,7 @@ warehouseDB.post("init", (doc) => {
 warehouseDB.post("save", (doc) => {
   setPdfURL(doc);
 });
+
 
 const warehousemodel = mongoose.model("projectwarehouse", warehouseDB);
 

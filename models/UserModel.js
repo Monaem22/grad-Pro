@@ -19,7 +19,6 @@ const userSchema = new mongoose.Schema(
       },
       phone: String,
       profileImg: String,
-  
       password: {
         type: String,
         required: [true, 'password required'],

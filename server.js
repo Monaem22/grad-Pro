@@ -22,6 +22,7 @@ server.use(express.urlencoded({ extends: true }));
 //amountroute
 mountRoutes(server);
 
+
 server.all("*", (req, res, next) => {
   next(new ApiErrors(`cant find your route:${req.originalUrl}`, 400));
 });
