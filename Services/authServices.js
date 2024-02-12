@@ -19,6 +19,9 @@ exports.login = async (req, res, next) => {
   if (!user) {
     return res.status(403).send("Invalid email or password");
   } else {
+    if (user.isblocked) {
+      return res.status(403).send("Your account is blocked. You cannot log in.");
+    }
     let isMatch = await bcrypt.compare(req.body.password, user.password);
     if (!isMatch) {
       console.log(`Password doesn't match`);
