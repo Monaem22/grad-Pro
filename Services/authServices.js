@@ -1,4 +1,5 @@
 const usermodel = require("../models/UserModel");
+const notification = require("../models/notification .js");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
 const ApiError = require("../util/ApiErrors");
@@ -10,6 +11,10 @@ exports.signup = async (req, res, next) => {
   const token = jwt.sign({ 
       userId: user._id }, process.env.JWT_SECRECT_KEY, {expiresIn: "90d",
   });
+  notification.create({
+    student:user._id,
+    content:"the new user has been register"
+  })
   res.status(201).json({ data: user, token });
 };
 
