@@ -54,6 +54,14 @@ const userSchema = new mongoose.Schema(
           ref: 'projectwarehouse',
         },
       ],
+      notification:{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "notification"
+      },
+      warehouseDB:[{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "projectwarehouse"
+      }],
     },
     { timestamps: true }
   );
