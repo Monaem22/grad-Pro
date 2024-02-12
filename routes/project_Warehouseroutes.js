@@ -8,10 +8,18 @@ const {
   uploadprojectpdf,
   processpdf,
   downloadpdf,
+<<<<<<< HEAD
 } = require("../Services/ProjectMangementServices");
 
 const authService = require("../Services/authServices");
 const project = require("../models/projects_WarehouseModel.js");
+=======
+  acceptProject,
+  rejectproject
+} = require("../Services/ProjectMangementServices");
+
+const authService = require("../Services/authServices");
+>>>>>>> f8fff45bae413ff4093f1cd0ff5a66b1373a0836
 
 const router = express.Router();
 
@@ -42,6 +50,7 @@ router
   );
 
 router.route("/download/:filename").get(downloadpdf);
+<<<<<<< HEAD
 
 //////////////////////////////////////////////
 router.post("/like", async (req, res) => {
@@ -132,4 +141,9 @@ router.get("/showComments/:_id", async (req, res) => {
   }
 });
 
+=======
+router.route("/accept/:projectid").put(acceptProject);
+router.route("/reject/:projectid").delete(rejectproject);
+
+>>>>>>> f8fff45bae413ff4093f1cd0ff5a66b1373a0836
 module.exports = router;

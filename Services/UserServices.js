@@ -1,16 +1,16 @@
 const { default: slugify } = require("slugify");
-const usermodel = require("../model/usermodel");
+const usermodel = require("../models/UserModel");
 const asyncHandler = require("express-async-handler");
 const ApiError = require("../util/ApiErrors");
 const slugfiy = require("slugify");
 const ApiFeature = require("../util/ApiFeature");
-const { uploadSingleImage } = require("../middleware/uploadImageMiddleware");
+//const { uploadSingleImage } = require("../middleware/uploadImageMiddleware");
 const { v4: uuidv4 } = require("uuid");
 const sharp = require("sharp");
 // const multer = require("multer");
 const bcrypt = require("bcryptjs");
 
-const uploadCategoryImage = uploadSingleImage("image");
+// const uploadCategoryImage = uploadSingleImage("image");
 const resizeImage = asyncHandler(async (req, res, next) => {
   const filename = `user-${uuidv4()}-${Date.now()}.jpeg`;
   if (req.file) {
@@ -40,7 +40,7 @@ const getALLUser = async (req, res) => {
   }
 };
 const getUser = async (req, res, next) => {
-  try {   
+  try {
     const spefic = await usermodel.findById(req.params.id);
     if (!spefic) {
       return next(new ApiError(`no brand found with this ${id}`, 404));
@@ -74,6 +74,7 @@ const updateUser = async (req, res) => {
           slug: req.body.slug,
           phone: req.body.phone,
           email: req.body.email,
+          isblocked: req.body.isblocked,
           profileImg: req.body.profileImg,
           role: req.body.role,
         },
@@ -123,7 +124,29 @@ const changeuserpassword = asyncHandler(async (req, res, next) => {
 const getloggedUserData = async (req, res, next) => {
   req.params.id = req.user._id;
   next();
-  
+};
+const blockUser = async (req, res, next) => {
+  const { email } = req.body;
+
+  try {
+    // Find the user by email
+    const user = await usermodel.findOne({ email });
+
+    if (!user) {
+      return res.status(404).send("User not found");
+    }
+
+    // Block the user
+    user.isblocked = true;
+
+    // Save the updated user object
+    await user.save();
+
+    return res.status(200).send("User blocked successfully");
+  } catch (error) {
+    console.error("Error blocking user:", error);
+    return res.status(500).send("Internal Server Error");
+  }
 };
 
 module.exports = {
@@ -132,8 +155,8 @@ module.exports = {
   createUser,
   updateUser,
   deleteUser,
-  uploadCategoryImage,
   resizeImage,
   changeuserpassword,
   getloggedUserData,
-}
+  blockUser,
+};
