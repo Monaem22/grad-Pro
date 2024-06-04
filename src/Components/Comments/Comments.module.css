@@ -1,0 +1,58 @@
+.ProjectsCards {
+  margin-top: 50px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: rgb(27, 93, 165);
+  font-weight: bold; /* Make the text bold */
+  text-align: center; /* Center-align the text */
+  overflow: hidden;
+  width: auto;
+}
+
+.ProjectCard {
+  text-align: center; /* Center-align the project cards */
+  text-decoration: none;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  &:hover,
+  &:active {
+    transform: scale(1.05);
+    text-decoration: none;
+    color: #007BFF;
+  }
+
+  h3 {
+    margin-top: 10px;
+  }
+
+  img {
+    max-width: 100%;
+    max-height: 300px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+  }
+}
+
+.ProjectCard button {
+  margin-right: 5px;
+  color: #fff;
+  background-color: rgb(27, 93, 165);
+  transition: background-color 0.3s ease, color 0.3s ease; /* Adding a smooth transition for a smoother effect */
+  &:hover,
+  &:active {
+    background-color: #3498db; /* Change to your desired hover color */
+    color: gold; /* Change to your desired text color on hover */
+  }
+}
+.deleteButton {
+  margin-right: 5px;
+  color: #fff;
+  background-color: #dc3545; /* Customize delete button color */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Adding a smooth transition for a smoother effect */
+  &:hover,
+  &:active {
+    background-color: #c82333; /* Change to your desired hover color */
+    color: #fff; /* Change to your desired text color on hover */
+  }
+}

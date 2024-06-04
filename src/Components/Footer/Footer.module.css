@@ -1,0 +1,31 @@
+
+.customPrimaryOpacity {
+    background-color: #1e4589
+  }
+  /* Footer.module.css */
+
+
+.socialLinks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.socialLink {
+  margin-right: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.footerContent {
+  color: white;
+}
+
+.footerContent a {
+  color: white;
+  text-decoration: none;
+}
+
+.footerContent a:hover {
+  text-decoration: underline;
+}

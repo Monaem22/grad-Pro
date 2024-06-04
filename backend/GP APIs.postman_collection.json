@@ -1,0 +1,2141 @@
+{
+	"info": {
+		"_postman_id": "d7331307-f3f8-4956-81f3-038dabfa2562",
+		"name": "GP APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26812826",
+		"_collection_link": "https://solar-robot-169559.postman.co/workspace/Team-Workspace~e5bbc995-82cf-49c0-8408-fae652292054/collection/26812826-d7331307-f3f8-4956-81f3-038dabfa2562?action=share&source=collection_link&creator=26812826"
+	},
+	"item": [
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "block-user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "660c593bb630562687505eae",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{localHost}}/app/user/blockUser",
+							"host": [
+								"{{localHost}}"
+							],
+							"path": [
+								"app",
+								"user",
+								"blockUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "unblock-User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "660c593bb630562687505eae",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{localHost}}/app/user/unblockUser",
+							"host": [
+								"{{localHost}}"
+							],
+							"path": [
+								"app",
+								"user",
+								"unblockUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-specific-User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localHost}}/app/user/getUser/662c929eb1074f2212344dd7",
+							"host": [
+								"{{localHost}}"
+							],
+							"path": [
+								"app",
+								"user",
+								"getUser",
+								"662c929eb1074f2212344dd7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-All-User-with-roll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "role",
+									"value": "student",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "role",
+									"value": "admin",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "role",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{localHost}}/app/user/getAllUser",
+							"host": [
+								"{{localHost}}"
+							],
+							"path": [
+								"app",
+								"user",
+								"getAllUser"
+							],
+							"query": [
+								{
+									"key": "role",
+									"value": "student",
+									"disabled": true
+								},
+								{
+									"key": "role",
+									"value": "admin",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "userId",
+									"value": "6630430131a2f3226528cd50",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{localHost}}/app/user/deleteUser",
+							"host": [
+								"{{localHost}}"
+							],
+							"path": [
+								"app",
+								"user",
+								"deleteUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create-User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "nashaat55@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "userName",
+									"value": "nashaat",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "9999999aA",
+									"type": "text"
+								},
+								{
+									"key": "Gmail_Acc",
+									"value": "Mohamed70nashaat@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "admin",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{localHost}}/app/user/createUser",
+							"host": [
+								"{{localHost}}"
+							],
+							"path": [
+								"app",
+								"user",
+								"createUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show-All-sys Actions",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{localHost}}/app/sysActions/showAllSysActions",
+							"host": [
+								"{{localHost}}"
+							],
+							"path": [
+								"app",
+								"sysActions",
+								"showAllSysActions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-sys Actions-of Specific user",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{localHost}}/app/sysActions/showSysActionsOfSpecificUser/6630430131a2f3226528cd50",
+							"host": [
+								"{{localHost}}"
+							],
+							"path": [
+								"app",
+								"sysActions",
+								"showSysActionsOfSpecificUser",
+								"6630430131a2f3226528cd50"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "upload_directory",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "directoryPath",
+									"value": "C:\\Users\\Yosef\\OneDrive - Faculty of Computers and Information\\Desktop\\all-data-set-pdf",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{localHost}}/app/project/upload_directory",
+							"host": [
+								"{{localHost}}"
+							],
+							"path": [
+								"app",
+								"project",
+								"upload_directory"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "student",
+			"item": [
+				{
+					"name": "update_my_Profile",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "userName",
+									"value": "kssssssssssssssssss",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "AAh5hpohh@gmail.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "ssssssssssss",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "Country",
+									"value": "ksssssssssssssssss",
+									"type": "text"
+								},
+								{
+									"key": "cityOrTown",
+									"value": "gbssssssssssssssssss",
+									"type": "text"
+								},
+								{
+									"key": "details",
+									"value": "gbssssssssssssssssssssssssss",
+									"type": "text"
+								},
+								{
+									"key": "bio",
+									"value": "sssss",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{localHost}}/app/user/updateProfile",
+							"host": [
+								"{{localHost}}"
+							],
+							"path": [
+								"app",
+								"user",
+								"updateProfile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-Password",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "newPassword",
+									"value": "9999999aAA",
+									"type": "text"
+								},
+								{
+									"key": "oldPassword",
+									"value": "9999999aA",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{localHost}}/app/user/updatePassword",
+							"host": [
+								"{{localHost}}"
+							],
+							"path": [
+								"app",
+								"user",
+								"updatePassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "upload_Transcript",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "application",
+									"type": "file",
+									"src": "postman-cloud:///1eee58e9-f480-4cc0-9be0-dffe55f8b836"
+								},
+								{
+									"key": "application",
+									"type": "file",
+									"src": "postman-cloud:///1eee5f60-7624-43e0-8e50-b61fbba14055",
+									"disabled": true
+								},
+								{
+									"key": "application",
+									"type": "file",
+									"src": "postman-cloud:///1eee599a-d125-41c0-8404-125ad9b95186",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{localHost}}/app/user/uploadTranscript",
+							"host": [
+								"{{localHost}}"
+							],
+							"path": [
+								"app",
+								"user",
+								"uploadTranscript"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteTranscript",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{localHost}}/app/user/deleteTranscript",
+							"host": [
+								"{{localHost}}"
+							],
+							"path": [
+								"app",
+								"user",
+								"deleteTranscript"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "upload_image",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "postman-cloud:///1eee5f60-7624-43e0-8e50-b61fbba14055",
+									"disabled": true
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "postman-cloud:///1eee58e9-f480-4cc0-9be0-dffe55f8b836",
+									"disabled": true
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "postman-cloud:///1eee599a-d125-41c0-8404-125ad9b95186"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{localHost}}/app/user/uploadimage",
+							"host": [
+								"{{localHost}}"
+							],
+							"path": [
+								"app",
+								"user",
+								"uploadimage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-Image",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "postman-cloud:///1eee599a-d125-41c0-8404-125ad9b95186"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "postman-cloud:///1eee5f60-7624-43e0-8e50-b61fbba14055",
+									"disabled": true
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "postman-cloud:///1eee58e9-f480-4cc0-9be0-dffe55f8b836",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{localHost}}/app/user/updateImage",
+							"host": [
+								"{{localHost}}"
+							],
+							"path": [
+								"app",
+								"user",
+								"updateImage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show-My-Profile",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localHost}}/app/user/showMyProfile",
+							"host": [
+								"{{localHost}}"
+							],
+							"path": [
+								"app",
+								"user",
+								"showMyProfile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search On User",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "search",
+									"value": "h"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{localHost}}/app/user/searchOnUser",
+							"host": [
+								"{{localHost}}"
+							],
+							"path": [
+								"app",
+								"user",
+								"searchOnUser"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "chating",
+			"item": [
+				{
+					"name": "chating",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "receiverID",
+									"value": "662deb46033c77225e073852",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{localHost}}/app/user/chating",
+							"host": [
+								"{{localHost}}"
+							],
+							"path": [
+								"app",
+								"user",
+								"chating"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show Specific Chat",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{localHost}}/app/user/showSpecificChat/663cdd9d8a4d9751cd9dc4e0",
+							"host": [
+								"{{localHost}}"
+							],
+							"path": [
+								"app",
+								"user",
+								"showSpecificChat",
+								"663cdd9d8a4d9751cd9dc4e0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "send Message Privte",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "receiverID",
+									"value": "662deb46033c77225e073852",
+									"type": "text"
+								},
+								{
+									"key": "intendedMessage",
+									"value": "asssssss",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{localHost}}/app/user/sendMessagePrivte",
+							"host": [
+								"{{localHost}}"
+							],
+							"path": [
+								"app",
+								"user",
+								"sendMessagePrivte"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show All My Chats",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localHost}}/app/user/showAllMyChats",
+							"host": [
+								"{{localHost}}"
+							],
+							"path": [
+								"app",
+								"user",
+								"showAllMyChats"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete Specific Chat",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "chatID",
+									"value": "6636af83adb6e2e114f23f3c",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{localHost}}/app/user/deleteSpecificChat",
+							"host": [
+								"{{localHost}}"
+							],
+							"path": [
+								"app",
+								"user",
+								"deleteSpecificChat"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "project mangement",
+			"item": [
+				{
+					"name": "admin",
+					"item": [
+						{
+							"name": "get-All-Pending-Projects",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localHost}}/app/project/AllPendingProjects",
+									"host": [
+										"{{localHost}}"
+									],
+									"path": [
+										"app",
+										"project",
+										"AllPendingProjects"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete-Project",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{localHost}}/app/project/deleteProject/6624102d91a8e46dbe4a2b99",
+									"host": [
+										"{{localHost}}"
+									],
+									"path": [
+										"app",
+										"project",
+										"deleteProject",
+										"6624102d91a8e46dbe4a2b99"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "change-Project-Status",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "status",
+											"value": "accepted",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "rejected",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{localHost}}/app/project/changeProjectStatus/662d9470bc802373489cf378",
+									"host": [
+										"{{localHost}}"
+									],
+									"path": [
+										"app",
+										"project",
+										"changeProjectStatus",
+										"662d9470bc802373489cf378"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete-One-Comment",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "comment_Id",
+											"value": "660cd86aac7d4846020742f1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "comment_Id",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{localHost}}/app/projectInteractions/deleteOneComment/660cd841ac7d4846020742de",
+									"host": [
+										"{{localHost}}"
+									],
+									"path": [
+										"app",
+										"projectInteractions",
+										"deleteOneComment",
+										"660cd841ac7d4846020742de"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "operations of projects",
+					"item": [
+						{
+							"name": "get Random Projecs",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localHost}}/app/project/getRandomProjecs",
+									"host": [
+										"{{localHost}}"
+									],
+									"path": [
+										"app",
+										"project",
+										"getRandomProjecs"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create-Project",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "application",
+											"type": "file",
+											"src": "postman-cloud:///1eee58e9-f480-4cc0-9be0-dffe55f8b836"
+										},
+										{
+											"key": "application",
+											"type": "file",
+											"src": "postman-cloud:///1eee5f60-7624-43e0-8e50-b61fbba14055",
+											"disabled": true
+										},
+										{
+											"key": "projectName",
+											"value": "j8",
+											"type": "text"
+										},
+										{
+											"key": "category",
+											"value": "11",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": ",,,,,,,,rt",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{localHost}}/app/project/createProject",
+									"host": [
+										"{{localHost}}"
+									],
+									"path": [
+										"app",
+										"project",
+										"createProject"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update-Project-Data",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "projectName",
+											"value": "452",
+											"type": "text"
+										},
+										{
+											"key": "category",
+											"value": "as",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "as",
+											"type": "text"
+										},
+										{
+											"key": "owner",
+											"value": "662d1e196c136d0c77180c8f",
+											"description": "if we want to replace it ",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{localHost}}/app/project/updateProjectData/662d1e196c136d0c77180c8f",
+									"host": [
+										"{{localHost}}"
+									],
+									"path": [
+										"app",
+										"project",
+										"updateProjectData",
+										"662d1e196c136d0c77180c8f"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update-Project file",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "application",
+											"type": "file",
+											"src": "postman-cloud:///1eeeca7e-172e-4140-adde-1a5edf58d130"
+										},
+										{
+											"key": "application",
+											"type": "file",
+											"src": "postman-cloud:///1eee5f60-7624-43e0-8e50-b61fbba14055",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{localHost}}/app/project/updateProjectFile/661f48185c449642773a49a7",
+									"host": [
+										"{{localHost}}"
+									],
+									"path": [
+										"app",
+										"project",
+										"updateProjectFile",
+										"661f48185c449642773a49a7"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete-My-Project",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{localHost}}/app/project/deleteMyProject/663c5bff55162c73590e296c",
+									"host": [
+										"{{localHost}}"
+									],
+									"path": [
+										"app",
+										"project",
+										"deleteMyProject",
+										"663c5bff55162c73590e296c"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get-Spacific-Project",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localHost}}/app/project/getSpacificProject/663c5bff55162c73590e296c",
+									"host": [
+										"{{localHost}}"
+									],
+									"path": [
+										"app",
+										"project",
+										"getSpacificProject",
+										"663c5bff55162c73590e296c"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get-All-Projects",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "category",
+											"value": "44",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "category",
+											"value": "11",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{localHost}}/app/project/getAllProjects",
+									"host": [
+										"{{localHost}}"
+									],
+									"path": [
+										"app",
+										"project",
+										"getAllProjects"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "all-My-Projects",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localHost}}/app/project/AllmyProjects",
+									"host": [
+										"{{localHost}}"
+									],
+									"path": [
+										"app",
+										"project",
+										"AllmyProjects"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "search On Project",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "search",
+											"value": "SIGNARATechnical_Report-project"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{localHost}}/app/project/searchOnProject",
+									"host": [
+										"{{localHost}}"
+									],
+									"path": [
+										"app",
+										"project",
+										"searchOnProject"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "interactions",
+					"item": [
+						{
+							"name": "add-Comment",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "content",
+											"value": "a",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{localHost}}/app/projectInteractions/addComment/662d1e186c136d0c77180c8a",
+									"host": [
+										"{{localHost}}"
+									],
+									"path": [
+										"app",
+										"projectInteractions",
+										"addComment",
+										"662d1e186c136d0c77180c8a"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete-My-Comment",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "comment_Id",
+											"value": "661f32cf0baa7723e2323d28",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "comment_Id",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{localHost}}/app/projectInteractions/deleteMyComment/660cd841ac7d4846020742de",
+									"host": [
+										"{{localHost}}"
+									],
+									"path": [
+										"app",
+										"projectInteractions",
+										"deleteMyComment",
+										"660cd841ac7d4846020742de"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete Comment On My Project",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "comment_Id",
+											"value": "661f3e713325f9e15f5f195b",
+											"type": "text"
+										},
+										{
+											"key": "comment_Id",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{localHost}}/app/projectInteractions/deleteCommentOnMyProject/6611d83db25899f21ad581ad",
+									"host": [
+										"{{localHost}}"
+									],
+									"path": [
+										"app",
+										"projectInteractions",
+										"deleteCommentOnMyProject",
+										"6611d83db25899f21ad581ad"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get-All-Comments for specific project",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localHost}}/app/projectInteractions/getAllComments/662d1e186c136d0c77180c8a",
+									"host": [
+										"{{localHost}}"
+									],
+									"path": [
+										"app",
+										"projectInteractions",
+										"getAllComments",
+										"662d1e186c136d0c77180c8a"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update My Comment",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "comment_Id",
+											"value": "661f332a0450ef15bb7cf5a0",
+											"type": "text"
+										},
+										{
+											"key": "newContent",
+											"value": "55555555",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{localHost}}/app/projectInteractions/updateMyComment/660cd841ac7d4846020742de",
+									"host": [
+										"{{localHost}}"
+									],
+									"path": [
+										"app",
+										"projectInteractions",
+										"updateMyComment",
+										"660cd841ac7d4846020742de"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add-like-To-Comment",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "comment_Id",
+											"value": "662d217dd4b0c2117fd24081",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{localHost}}/app/projectInteractions/addlikeToComment/662d1e186c136d0c77180c8a",
+									"host": [
+										"{{localHost}}"
+									],
+									"path": [
+										"app",
+										"projectInteractions",
+										"addlikeToComment",
+										"662d1e186c136d0c77180c8a"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete-My-Like-On-Comment",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "like_Id",
+											"value": "661f497df4d0589f2adcc3f8",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "comment_Id",
+											"value": "660cd8c4ac7d48460207430f",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "like_Id",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "comment_Id",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{localHost}}/app/projectInteractions/deleteMyLikeOnComment/660cd841ac7d4846020742de",
+									"host": [
+										"{{localHost}}"
+									],
+									"path": [
+										"app",
+										"projectInteractions",
+										"deleteMyLikeOnComment",
+										"660cd841ac7d4846020742de"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "show All Likes On Comment",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "comment_Id",
+											"value": "662d217dd4b0c2117fd24081",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{localHost}}/app/projectInteractions/showAllLikesOnComment/662d1e186c136d0c77180c8a",
+									"host": [
+										"{{localHost}}"
+									],
+									"path": [
+										"app",
+										"projectInteractions",
+										"showAllLikesOnComment",
+										"662d1e186c136d0c77180c8a"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add-like",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{localHost}}/app/projectInteractions/addlike/662d1e196c136d0c77180c8f",
+									"host": [
+										"{{localHost}}"
+									],
+									"path": [
+										"app",
+										"projectInteractions",
+										"addlike",
+										"662d1e196c136d0c77180c8f"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete-My-Like",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "like_Id",
+											"value": "663051e4819d6cffd880d3e1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{localHost}}/app/projectInteractions/deleteMyLike/662d1e196c136d0c77180c8f",
+									"host": [
+										"{{localHost}}"
+									],
+									"path": [
+										"app",
+										"projectInteractions",
+										"deleteMyLike",
+										"662d1e196c136d0c77180c8f"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get-All-Likes",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localHost}}/app/projectInteractions/getAllLikes/662d1e196c136d0c77180c8f",
+									"host": [
+										"{{localHost}}"
+									],
+									"path": [
+										"app",
+										"projectInteractions",
+										"getAllLikes",
+										"662d1e196c136d0c77180c8f"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get my interactions",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localHost}}/app/Notification/showMyInteractions",
+									"host": [
+										"{{localHost}}"
+									],
+									"path": [
+										"app",
+										"Notification",
+										"showMyInteractions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete all my Interactions",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{JWT}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{localHost}}/app/Notification/deleteAllMyInteractions",
+									"host": [
+										"{{localHost}}"
+									],
+									"path": [
+										"app",
+										"Notification",
+										"deleteAllMyInteractions"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "notifications",
+			"item": [
+				{
+					"name": "show-All-Notifications",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localHost}}/app/Notification/showAllNotifications",
+							"host": [
+								"{{localHost}}"
+							],
+							"path": [
+								"app",
+								"Notification",
+								"showAllNotifications"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get my notifications",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localHost}}/app/Notification/showMyNotifications",
+							"host": [
+								"{{localHost}}"
+							],
+							"path": [
+								"app",
+								"Notification",
+								"showMyNotifications"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete all my notification",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{localHost}}/app/Notification/deleteAllMyNotification",
+							"host": [
+								"{{localHost}}"
+							],
+							"path": [
+								"app",
+								"Notification",
+								"deleteAllMyNotification"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete notification",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{JWT}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "notification_ID",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{localHost}}/app/Notification/deleteNotification",
+							"host": [
+								"{{localHost}}"
+							],
+							"path": [
+								"app",
+								"Notification",
+								"deleteNotification"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "FavoriteList",
+			"item": [
+				{
+					"name": "add-Project-To-Favorite-List",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "project_ID",
+									"value": "662d1e1a6c136d0c77180c94",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{localHost}}/app/userFavList/addProjectToFavoriteList",
+							"host": [
+								"{{localHost}}"
+							],
+							"path": [
+								"app",
+								"userFavList",
+								"addProjectToFavoriteList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "remove-Project-from-Favorite-List",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "project_ID",
+									"value": "6628566e3b64cd817e474784",
+									"type": "text"
+								},
+								{
+									"key": "project_ID",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{localHost}}/app/userFavList/removeProjectFromFavoriteList",
+							"host": [
+								"{{localHost}}"
+							],
+							"path": [
+								"app",
+								"userFavList",
+								"removeProjectFromFavoriteList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show-My-Favorite-List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localHost}}/app/userFavList/showMyFavoriteList",
+							"host": [
+								"{{localHost}}"
+							],
+							"path": [
+								"app",
+								"userFavList",
+								"showMyFavoriteList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-All-Users-Added-This-Proj-To-Fav-List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "project_ID",
+									"value": "662d1e186c136d0c77180c8a",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{localHost}}/app/userFavList/getAllUsersAddedThisProjToFavList",
+							"host": [
+								"{{localHost}}"
+							],
+							"path": [
+								"app",
+								"userFavList",
+								"getAllUsersAddedThisProjToFavList"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "sign up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "hh@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "userName",
+									"value": "11110000A",
+									"type": "text"
+								},
+								{
+									"key": "Gmail_Acc",
+									"value": "manemosama@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "uuuuuasaauuSD12",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "admin",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{localHost}}/app/auth/signup",
+							"host": [
+								"{{localHost}}"
+							],
+							"path": [
+								"app",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "hh@gmail.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "uuuuuasaauuSD12",
+									"type": "text"
+								},
+								{
+									"key": "",
+									"value": "11110000",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "hh@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{localHost}}/app/auth/login",
+							"host": [
+								"{{localHost}}"
+							],
+							"path": [
+								"app",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "admin_login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "monaem@gmail.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "9999999aA",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "shahd55@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{localHost}}/app/auth/login",
+							"host": [
+								"{{localHost}}"
+							],
+							"path": [
+								"app",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localHost}}/app/auth/logout",
+							"host": [
+								"{{localHost}}"
+							],
+							"path": [
+								"app",
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forget password",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"JWT\", pm.response.json().token);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "aasa@gmail.co",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{localHost}}/app/auth/forgetPassword",
+							"host": [
+								"{{localHost}}"
+							],
+							"path": [
+								"app",
+								"auth",
+								"forgetPassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verify-Rest-Code",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"JWT\", pm.response.json().token);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "resetCode",
+									"value": "891628",
+									"type": "text"
+								},
+								{
+									"key": "resetCode",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{localHost}}/app/auth/verifyRestCode",
+							"host": [
+								"{{localHost}}"
+							],
+							"path": [
+								"app",
+								"auth",
+								"verifyRestCode"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reset-Password",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"JWT\", pm.response.json().token);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "AAh5hpohh@gmail.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "newPassword",
+									"value": "123456789",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{localHost}}/app/auth/resetPassword",
+							"host": [
+								"{{localHost}}"
+							],
+							"path": [
+								"app",
+								"auth",
+								"resetPassword"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "localHost",
+			"value": "https://grad-project-3zvo.onrender.com",
+			"type": "string"
+		}
+	]
+}

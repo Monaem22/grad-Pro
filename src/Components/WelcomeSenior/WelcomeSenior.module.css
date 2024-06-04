@@ -1,0 +1,97 @@
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
+  width: 100%;
+  background: white;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  aspect-ratio: 100 / 29;  animation: fadeIn 1s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+@keyframes fadeIn {
+from {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+to {
+  opacity: 1;
+  transform: translateY(0);
+}
+}
+.headerContainer{
+  flex: 1;
+  margin-right: 20px; 
+  width: 16.5em; 
+  margin: 2em 1em;
+
+}
+.descriptionContainer {
+  flex: 1;
+  margin-right: 20px; 
+
+}
+
+.heading1 {
+  white-space: nowrap; 
+  overflow: hidden; 
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  border-right: 3px solid rgb(27 93 165); 
+  animation: typingAnimation 6s cubic-bezier(0.25, 0.1, 0.25, 1) infinite; /* Adjust the duration and steps as needed */
+}
+
+@keyframes typingAnimation {
+  from {
+    width: 0;
+  }
+  to {
+    width:80%;
+    border-right: none;
+  }
+}
+
+
+.imageContainer {
+  flex: 1;
+}
+
+.image {
+  width: 95%;
+  height: auto;
+}
+.loginButton {
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #1e4589;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none; 
+}
+
+.loginButton:hover {
+  background-color: #0056b3; 
+  text-decoration: none;
+}
+.getStartedButton {
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #1e4589;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  margin-left: 10px;
+}
+.getStartedButton:hover{
+  background-color: #0056b3; 
+  text-decoration: none;
+}

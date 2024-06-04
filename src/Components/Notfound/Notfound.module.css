@@ -1,0 +1,30 @@
+/* Notfound.module.css */
+
+.not-found-container {
+  text-align: center;
+}
+
+.not-found-content {
+  width: 100%;
+  max-width: 700px; /* Adjust as needed */
+  margin: 0 auto;
+}
+
+.not-found-content img {
+  width: 100%;
+  max-width: 700px; /* Adjust as needed */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  
+}
+
+.not-found-content p {
+  margin-bottom: 20px;
+  
+}
+
+.not-found-content a {
+  text-align: center;
+  display: block;
+}

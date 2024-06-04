@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.imageContainer {
+  flex: 1;
+}
+
+.text {
+  flex: 1;
+  padding: 0 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.description {
+  font-size: 25px; /* Increased font size */
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.adminList {
+  list-style-type: none;
+  padding: 0;
+}
+
+.adminList li {
+  margin-bottom: 5px;
+  font-size: 25px; /* Increased font size */
+  
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+}

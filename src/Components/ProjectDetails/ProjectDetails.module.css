@@ -1,0 +1,26 @@
+/* ProjectDetails.module.css */
+
+.commentBox {
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.commentBox textarea {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  resize: vertical; /* Allow vertical resizing */
+}
+
+.commentBox textarea:focus {
+  outline: none; /* Remove outline when focused */
+  border-color: #3498db; /* Change border color when focused */
+}
+
+.commentBox button {
+  margin-top: 10px;
+}
