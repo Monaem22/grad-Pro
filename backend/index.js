@@ -12,7 +12,8 @@ dbConnection();
 
 // global middleware
 const corsOptions = {
-  origin: 'http://localhost:3000',
+  // origin: 'http://localhost:3000',
+  origin: 'https://monaem22.github.io/grad-Pro/',
   credentials: true,            //access-control-allow-credentials:true
   optionSuccessStatus: 200
 }
