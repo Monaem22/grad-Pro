@@ -1,4 +1,4 @@
-# all things that i have applied in backend developer: 
+# all things that i have applied as backend developer: 
 
 
 # demo of the full project and all things related to my graduation project :
