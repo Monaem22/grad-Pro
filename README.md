@@ -1,3 +1,6 @@
+# all things that i have applied in backend developer: 
+
+
 # demo of the full project and all things related to my graduation project :
 https://drive.google.com/drive/folders/1U8N8_nF40PFgWFGbo6OwTKTLq7atKpvi
 # here the functions were applied in :
@@ -19,15 +22,13 @@ and we can add more depend on business need
 
 //////////////////////////////////////////////////////////////////////..........................................
 
-# all things that i have applied in backend: 
-
 ## deployment :
  on render server 
 ## api documentation : 
 https://documenter.getpostman.com/view/26812826/2sA3kRJjB6
 
 # 1-technologies : 
-nodeJS , expressJS , mongoDB , postman and GitHub
+### nodeJS , expressJS , mongoDB , postman and GitHub
 # 2-libraries : 
 "bcrypt"
 "body-parser"
